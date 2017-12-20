@@ -6,7 +6,8 @@ public class Main {
         Printer printer = new Printer();
 
 
-        printer.scnnFile("test.txt");
+       // printer.scnnFile("test.txt");
+        printer.copyFile("testcopy1.txt","testcopy.txt");
 
     }
 }
