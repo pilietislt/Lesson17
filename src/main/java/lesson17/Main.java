@@ -7,7 +7,8 @@ public class Main {
 
 
        // printer.scnnFile("test.txt");
-        printer.copyFile("testcopy1.txt","testcopy.txt");
+        //printer.copyFile("testcopy1.txt","testcopy.txt");
+        printer.countWord("test.txt");
 
     }
 }

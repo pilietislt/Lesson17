@@ -16,9 +16,6 @@ public class Printer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     void copyFile(String newFileName, String copyFileName){
@@ -26,7 +23,6 @@ public class Printer {
         try (
                 BufferedWriter out = new BufferedWriter(new FileWriter(newFileName))
         ) {
-
             try (
                     BufferedReader in = new BufferedReader(new FileReader(copyFileName));
             ) {
@@ -37,13 +33,30 @@ public class Printer {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    void countWord(String fileName){
+        int count = 0;
+
+        try (
+                BufferedReader in = new BufferedReader(new FileReader(fileName));
+        ) {
+            String line;
+            while ((line = in.readLine()) != null) {
+                String [] words = line.split(" ");
+                count += words.length;
+
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(count);
+
 
     }
 
