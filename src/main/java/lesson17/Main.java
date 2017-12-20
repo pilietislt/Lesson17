@@ -12,6 +12,7 @@ public class Main {
         // printer.copyFile("testcopy1.txt","testcopy.txt");
        //  printer.countWord("test.txt");
         carRegister.registerCar(new Car("abc123","red","bensine", 2017,10));
+        carRegister.printRegistredCars("Car_register.txt");
 
 
 

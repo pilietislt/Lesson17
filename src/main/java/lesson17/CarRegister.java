@@ -15,4 +15,15 @@ public class CarRegister {
         }
     }
 
+    void printRegistredCars (String fileName){
+        try (
+                ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))
+        ) {
+            System.out.println(in.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }
